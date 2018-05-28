@@ -165,6 +165,7 @@ namespace TechJobs.Models
                 {
                     if (c == stringSeparator)
                     {
+                        //[JEFF] may ask for explanation of this line
                         isBetweenQuotes = !isBetweenQuotes;
                     }
                     else
