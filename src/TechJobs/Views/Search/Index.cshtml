@@ -10,8 +10,8 @@
                 <input type="radio"
                        name="searchType"
                        id="@column.Key"
-                       value="@column.Key" 
-                       checked="@column.Key == 'all''"/>
+                       value="@column.Key"
+                       checked="@column.Key == 'all''" />
                 <label for="@column.Key">@column.Value</label>
             </span>
         }
@@ -34,18 +34,17 @@
 
     // TODO #2 - Loop over jobs dictionary and display all job fields
     {
-    <table class="job-listing">
         @foreach (Dictionary<string, string> job in ViewBag.jobs)
         {
-            @foreach (KeyValuePair<string, string> item in job)
-            {
-                <tr>
-                <td>@item.Key</td>
-                <td>@item.Value</td>
-            </tr>
-            }
-         }
-    </table>
-    <br />
+            <table class="job-listing">
+                @foreach (KeyValuePair<string, string> item in job)
+                {
+                    <tr>
+                        <td>@item.Key</td>
+                        <td>@item.Value</td>
+                    </tr>
+                }
+            </table>
+        }
     }
 }
